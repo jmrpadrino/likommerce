@@ -1,0 +1,36 @@
+/* STYLES FOR METABOXES */
+.lk24-meta-field-wrapper{
+	margin-bottom: 10px;
+	padding: 4px 0;
+}
+.lk24-meta-field-wrapper:hover{
+	background: #fbfbfb;
+}
+.lk24-meta-field-wrapper:before, 
+.lk24-meta-field-wrapper:after{
+	content: " ";
+    display: table;
+}
+.lk24-meta-field-wrapper:after{
+	clear: both;
+}
+.lk24-meta-field-label {
+    width: 25%;
+}
+.lk24-meta-field-label, 
+.lk24-meta-field-input{
+	vertical-align: top;
+    float: left;
+}
+.lk24-meta-field-label > label {
+    font-weight: 600;
+}
+.lk24-meta-field-label ~ .lk24-meta-field-input {
+    width: 75%;
+}
+.lk24-price-input{
+	width: 80px;
+}
+.lk24-meta-field-wrapper textarea{
+	width: 100%;
+}
