@@ -25,11 +25,21 @@ add_action( 'add_meta_boxes', 'lk24_register_meta_boxes' );
  */
 function lk24_display_callback( $post ) {
 	
+	$sku		 	= get_post_meta( $post->ID, META_PREFIX . 'sku', true );
 	$regular_price 	= get_post_meta( $post->ID, META_PREFIX . 'regular_price', true );
 	$sale_price 	= get_post_meta( $post->ID, META_PREFIX . 'sale_price', true );
 	$description 	= get_post_meta( $post->ID, META_PREFIX . 'description', true );
 	
 	?>
+	<div class="lk24-meta-field-wrapper">
+		<div class="lk24-meta-field-label">
+			<label for="lk24_sku"><i class="fas fa-shopping-bag"></i> <?= _e('Stock-keeping unit (SKU)', 'likommerce')?></label>
+		</div>
+		<div class="lk24-meta-field-input">
+			<input id="lk24_sku" class="lk24-price-input" name="lk24_sku" type="text" value="<?= $sku ?>">
+			<p class="description">Tart macaroon chocolate bar gingerbread pie liquorice topping.</p>
+		</div>
+	</div>
 	<div class="lk24-meta-field-wrapper">
 		<div class="lk24-meta-field-label">
 			<label for="lk24_regular_price"><i class="fas fa-euro-sign"></i> <?= _e('Regular Price', 'likommerce')?></label>
@@ -86,6 +96,7 @@ function lk24_save_meta_box( $post_id ) {
         return;
     }
 	
+	update_post_meta( $post_id, META_PREFIX . 'sku',  $_POST['lk24_sku'] );
 	update_post_meta( $post_id, META_PREFIX . 'regular_price',  $_POST['lk24_regular_price'] );
 	update_post_meta( $post_id, META_PREFIX . 'sale_price', $_POST['lk24_sale_price'] );
 	update_post_meta( $post_id, META_PREFIX . 'description', $_POST['lk24_short_desc'] );

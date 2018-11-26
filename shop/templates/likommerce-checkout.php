@@ -1,4 +1,4 @@
 <?php 
 	get_header();
-	echo 'aqui';
-	get_footer()
+	echo 'aqui en el checkout';
+	get_footer();

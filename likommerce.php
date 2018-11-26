@@ -49,6 +49,7 @@ require_once 'shortcodes/likommerce-shortcodes.php'; 		// All e-commerce Add Cus
 
 /* FRONTEND */
 require_once 'shop/likommerce-shop-setup.php'; 	// All e-commerce Add Custom User
+require_once 'shop/likommerce-functions.php'; 	// All e-commerce Add Custom User
 
 function mostrar($arreglo){
 	echo '<pre>';

@@ -42,3 +42,9 @@ function lk24_settings_plugin_link( $links, $file ){
 add_action('pre_get_posts', function(){
     flush_rewrite_rules();
 });
+
+function lk24_shop_scripts(){
+	wp_register_style( 'lk24-shop', LIKOMMERCE_PLUGIN_URI . '/shop/css/likommerce-shop.css', false, '1.0.0' );
+	wp_enqueue_style( 'lk24-shop' );
+}
+add_action('wp_enqueue_scripts', 'lk24_shop_scripts');

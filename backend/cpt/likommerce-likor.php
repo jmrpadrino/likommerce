@@ -55,14 +55,14 @@ if ( ! function_exists('lk24_cpt_liqueurs') ) {
 			'show_in_admin_bar'     => true,
 			'show_in_nav_menus'     => true,
 			'can_export'            => true,
-			'has_archive'           => 'Liqueurs',
+			'has_archive'           => 'liqueurs',
 			'exclude_from_search'   => false,
 			'publicly_queryable'    => true,
-			'query_var'             => 'Liquor',
+			'query_var'             => 'liquor',
 			'rewrite'               => $rewrite,
 			'capability_type'       => 'post',
 			'show_in_rest'          => true,
-			'rest_base'             => 'lk24-Liqueurs',
+			'rest_base'             => 'lk24-liqueurs',
 		);
 		register_post_type( 'lk24-liquor', $args );
 
